@@ -10,5 +10,5 @@ import {MainFooterComponent} from "./footer/main-footer/main-footer.component";
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-
+  public static title = 'Voltios Games';
 }
