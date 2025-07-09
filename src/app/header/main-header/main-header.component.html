@@ -61,14 +61,22 @@
                 />
             </svg>
             <p-button [label]="title" text/>
-            <p-button label="Categorías" text plain />
             <p-button label="Tienda" text plain />
-            <p-button label="Contactanos" text plain />
         </div>
     </ng-template>
     <ng-template #end>
-        <app-off-canvas-header></app-off-canvas-header>
+        <div class="flex justify-center">
+            <p-inputgroup class="w-36">
+                <p-inputGroupAddon>
+                    <i class="pi pi-search"></i>
+                </p-inputGroupAddon>
+                <input type="text" pInputText placeholder="Buscar en la tienda..." />
+            </p-inputgroup>
+        </div>
     </ng-template>
+
+    <app-off-canvas-header></app-off-canvas-header>
+
 </p-toolbar>
 
 
