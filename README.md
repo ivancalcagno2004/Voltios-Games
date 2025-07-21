@@ -1,59 +1,11 @@
 # VoltiosGames
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.12.
+Se llevó a cabo una página (en fase beta) de una plataforma de venta de videojuegos, cuyo propósito es simular una tienda digital de videojuegos, similar a plataformas populares como Steam o Epic Games Store. Su objetivo es ofrecer un catálogo visual de juegos, permitiendo a los usuarios explorarlos, ver sus detalles y agregarlos a un carrito de compras.
 
-## Development server
+## ¿Por qué este tema?
+Elegí este tema porque combina el desarrollo web moderno con una temática atractiva y ampliamente reconocida: los videojuegos. Desarrollar una tienda de este tipo permite aplicar conceptos clave del desarrollo frontend como componentes reutilizables, consumo de APIs, manejo de estados, servicios, y diseño responsivo, todo en un contexto concreto y estimulante.
 
-To start a local development server, run:
+Además, ofrece desafíos interesantes, como el uso de carruseles de juegos, manejo de carrito, y simulación de flujo de compra, lo cual se alinea con prácticas reales de aplicaciones e-commerce.
+## Datos del alumno
 
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Iván Calcagno, 45521858, ivancalcagno3003@gmail.com, Tandil.

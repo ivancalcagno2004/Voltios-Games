@@ -8,7 +8,9 @@
             <li *ngFor="let game of (cartList$ | async)">
                 ✔️ {{game.cart}} {{game.name}} - ${{game.price * game.cart}}
             </li>
-            <h3>Total: ${{ totalCount$ | async }} </h3>
+            @if (totalCount$ | async){
+                <h3>Total: ${{ totalCount$ | async }} </h3>
+            }
         </ul>
     </div>
 </div>

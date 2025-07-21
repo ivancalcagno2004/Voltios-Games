@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import {AppComponent} from "../../app.component";
-import {GameCartComponent} from "../../main-content/game-cart/game-cart.component";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-off-canvas-header',
     imports: [
-        GameCartComponent
+        RouterLink
 
     ],
   templateUrl: './off-canvas-header.component.html',
