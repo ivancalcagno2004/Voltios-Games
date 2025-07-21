@@ -1,20 +1,33 @@
-<p-carousel [value]="games" [numVisible]="4" [numScroll]="1" [circular]="true"  autoplayInterval="4000" data-bs-theme="dark" class="m-4"> <!-- [responsiveOptions]="responsiveOptions" -->
-    <ng-template let-game #item>
-        <div class="border border-surface-200 dark:border-surface-700 rounded m-2 p-4 bg-dark text-white">
-            <div class="mb-4">
-                <div class="relative mx-auto">
-                    <img [src]="game.image" [alt]="game.name" class="w-full rounded-border" />
-                    <p-tag [value]="game.inventoryStatus"  class="absolute dark:!bg-surface-900" [ngStyle]="{ 'left.px': 5, 'top.px': 5 }" /> <!-- [severity]="getSeverity(product.inventoryStatus)" -->
+<div class="container d-flex justify-content-center align-items-center">
+    <ngb-carousel  *ngIf="grupoJuegos.length > 0" [interval]="4000" [wrap]="true" [pauseOnHover]="true" [keyboard]="true">
+        <ng-template ngbSlide *ngFor="let grupo of grupoJuegos">
+            <div class="d-flex justify-content-center flex-wrap gap-5">
+                <div class="card p-2 shadow-sm bg-dark-subtle" *ngFor="let game of grupo" style="width: 200px;">
+                    <img [src]="game.image" class="card-img-top" alt="{{ game.name }}">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">{{ game.name }}</h5>
+                        <p class="card-text text-success fw-bold">${{ game.price }}</p>
+                        <p class="card-text">
+                            <span class="badge" [ngClass]="game.stock > 0 ? 'bg-success' : 'bg-danger'">
+                                {{ game.stock > 0 ? 'IN STOCK' : 'OUT OF STOCK' }}
+                            </span>
+                        </p>
+                    </div>
+                    @if (game.stock > 0){
+                        <div class="card-footer">
+                            <div class="btn-group">
+                                <button class="btn btn-secondary btn-sm" type="button" (click)="addToCart(game)" (click)="getTotalCount()">
+                                    COMPRAR <i class="pi pi-shopping-cart"></i>
+                                </button>
+                                <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="visually-hidden">Toggle Dropdown</span>
+                                </button>
+                                <app-input-integer [(cantidadCart)]="game.cart" [max]="game.stock" (maxAlcanzado)="maxAlcanzado($event)"></app-input-integer>
+                            </div>
+                        </div>
+                    }
                 </div>
             </div>
-            <div class="mb-4 font-medium">{{ game.name }}</div>
-            <div class="flex justify-between items-center">
-                <div class="mt-0 font-semibold text-xl">{{ '$' + game.price }}</div>
-                <span >
-                    <p-button icon="pi pi-heart" severity="secondary" [outlined]="true" />
-                    <p-button icon="pi pi-shopping-cart" severity="info" styleClass="m-2" />
-                </span>
-            </div>
-        </div>
-    </ng-template>
-</p-carousel>
+        </ng-template>
+    </ngb-carousel>
+</div>

@@ -6,6 +6,8 @@ import {AppComponent} from "../../app.component";
 import { InputGroupModule } from 'primeng/inputgroup';
 import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
 import {InputText} from "primeng/inputtext";
+import {RouterLink} from "@angular/router";
+import {GameCartComponent} from "../../main-content/game-cart/game-cart.component";
 
 @Component({
   selector: 'app-main-header',
@@ -16,6 +18,8 @@ import {InputText} from "primeng/inputtext";
         InputGroupModule,
         InputGroupAddonModule,
         InputText,
+        RouterLink,
+        GameCartComponent,
     ],
   templateUrl: './main-header.component.html',
   styleUrl: './main-header.component.scss'

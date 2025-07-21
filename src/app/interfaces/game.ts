@@ -4,4 +4,5 @@ export interface Game {
     image: string;
     stock: number;
     offer: boolean;
+    cart: number;
 }
