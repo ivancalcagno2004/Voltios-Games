@@ -9,3 +9,9 @@ Además, ofrece desafíos interesantes, como el uso de carruseles de juegos, man
 ## Datos del alumno
 
 Iván Calcagno, 45521858, ivancalcagno3003@gmail.com, Tandil.
+
+Stackblitz:
+https://stackblitz.com/~/github.com/ivancalcagno2004/Voltios-Games
+
+GitHub:
+https://github.com/ivancalcagno2004/Voltios-Games
